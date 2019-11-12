@@ -1,0 +1,32 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu type="overlay">
+      <!--
+      <ion-header>
+        <ion-toolbar>
+          <ion-title></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      -->
+      <br/>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" *ngIf="p.title != 'Logoff'">
+              <!--<ion-icon slot="start" [name]="p.icon"></ion-icon>-->
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+            <ion-item (click)="sair()" *ngIf="p.title == 'Logoff'">
+                <ion-label>
+                  Logoff
+                </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

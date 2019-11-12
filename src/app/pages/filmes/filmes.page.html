@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>
+      Filmes 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+    [(ngModel)]="searchCriteria"
+    hideCancelButton="false"
+    (keyup)="searchBoxInput($event)"
+    (ionClear)="searchBoxCancel($event)"
+    cancelButtonText="Cancelar"
+    placeholder="Pesquisar descrição…"
+    color="light" 
+    primary></ion-searchbar>
+    <div class="centersml">
+      <small>selecione um filme para comentar</small>
+    </div>
+  <ion-card style="background-color: #e4e4e3; margin-bottom: 20px" *ngFor="let flm of filmes | slice:0:limitload;" (click)="detalhes(flm)">
+    <ion-card-header color="light" style="height: 40px;">
+      <small class="float_letf filme">{{flm.nome}}</small>
+      <small class=" pts float_right">Categoria: {{flm.categoria_nome}}</small>
+    </ion-card-header>
+    <ion-card-content class="descricao" [innerHTML]="flm.descricao"></ion-card-content>
+  </ion-card>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Carregando...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "apptran-dev",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

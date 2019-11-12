@@ -1,0 +1,31 @@
+<ion-content padding>
+	<div class="card_form">
+		<div class="logo">
+			Filmes
+		</div>
+		<div class="form_inputs">
+			<div class="box_input">
+				<div class="input_email">
+					<label>Email</label>
+					<input (keydown)="keyDownHandler($event)" class="input_form" type="email" [(ngModel)]="formulario.email">
+				</div>
+				<div class="input_senha">
+					<label>Senha</label>
+					<input (keydown)="keyDownHandler($event)" class="input_form" type="password" [(ngModel)]="formulario.senha">
+				</div>
+			</div>
+		</div>
+        <div class="box_buttons">
+        	<div>
+        		<ion-button (click)="login()" expand="block" class="ion-no-margin">Acessar</ion-button>
+        	</div>
+        </div>
+        <div style="text-align: center;">
+        	Para se cadastrar acesse nosso site
+        </div>
+        <div style="text-align: center; font-size: 14px; margin-top: 25px;color: #ababab;">
+        	Ronaldo Freitas
+        </div>
+	</div>
+
+</ion-content>

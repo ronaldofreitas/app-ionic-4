@@ -1,0 +1,117 @@
+.card_form{
+	background-color: #fff;
+	.logo{
+		text-align: center;
+		padding-top: 25px;
+		text-shadow: 5px 5px 4px #3b7efa;
+		font-size: 45px;
+	}
+	.form_inputs{
+		
+		padding-top: 60px;
+		.box_input{
+			margin-top: 15px;
+			.input_email{
+				margin-top: 15px;
+			}
+			.input_senha{
+				margin-top: 15px;
+			}
+			.input_form{
+				width: 100%;
+				padding: 10px;
+				margin-top: 5px;
+				border-radius: 5px;
+				border:1px solid #ccc;
+			}
+		}
+		label{
+			color: #565656;
+		}
+		.box_esqueci{
+			margin-top: 10px;
+			color: #17acc3;
+			width: 100%;
+			text-align: right;
+			height: 50px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #ccc;
+		}
+	}
+	.box_buttons{
+		width: 100%;
+		margin-top: 25px;
+		margin-bottom: 25px;
+		
+		.button_left{
+			text-align: left;
+			float: left;
+		}
+		.button_right{
+			text-align: right;
+		}
+	}
+
+	.container_check {
+	  display: block;
+	  position: relative;
+	  padding-left: 35px;
+	  margin-bottom: 12px;
+	  cursor: pointer;
+	  font-size: 15px;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  padding-top: 5px;
+	  margin-bottom: 35px;
+	}
+
+	.container_check input {
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	  height: 0;
+	  width: 0;
+	}
+
+	.checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 25px;
+	  width: 25px;
+	  background-color: #eee;
+	}
+
+	.container_check:hover input ~ .checkmark {
+	  background-color: #ccc;
+	}
+
+	.container_check input:checked ~ .checkmark {
+	  background-color: #44d2e8;
+	}
+
+	.checkmark:after {
+	  content: "";
+	  position: absolute;
+	  display: none;
+	}
+
+	.container_check input:checked ~ .checkmark:after {
+	  display: block;
+	}
+
+	.container_check .checkmark:after {
+	  left: 9px;
+	  top: 5px;
+	  width: 5px;
+	  height: 10px;
+	  border: solid white;
+	  border-width: 0 3px 3px 0;
+	  -webkit-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	}
+
+}
